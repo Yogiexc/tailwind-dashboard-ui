@@ -2,7 +2,7 @@
 
 > **Building a modern dashboard UI using Tailwind CSS v4 with a utility-first and design system mindset.**
 
-![Dashboard Preview](https://via.placeholder.com/1200x600/0ea5e9/ffffff?text=Modern+Dashboard+UI)
+![Dashboard Preview](media/image.png)
 
 ## 📋 Table of Contents
 
