@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color Tokens */
+  --color-ocean-500: #0ea5e9;
+  --color-ocean-600: #0284c7;
+  --color-ocean-700: #0369a1;
+
+  --color-wine-500: #d946ef;
+  --color-wine-600: #c026d3;
+  --color-wine-700: #a21caf;
+
+  --color-forest-500: #22c55e;
+  --color-forest-600: #16a34a;
+  --color-forest-700: #15803d;
+  
+  /* Border Radius Tokens */
+  --radius-xl: 12px;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 transition-colors duration-300 font-sans antialiased;
+  }
+  .dark body {
+    @apply bg-gray-900 text-gray-100;
+  }
+}
+
+/* Theme Variants Logic */
+.theme-ocean { --color-primary: var(--color-ocean-600); --color-primary-hover: var(--color-ocean-700); }
+.theme-wine { --color-primary: var(--color-wine-600); --color-primary-hover: var(--color-wine-700); }
+.theme-forest { --color-primary: var(--color-forest-600); --color-primary-hover: var(--color-forest-700); }
+
+/* Dynamic Components using Design Tokens */
+.sidebar-active { background-color: var(--color-primary, #2563eb); @apply text-white; }
+.btn-primary { background-color: var(--color-primary, #2563eb); @apply text-white transition-all hover:opacity-90 active:scale-95; }
